@@ -8,28 +8,37 @@
     <title>Tabelas</title>
 
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif; 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        table{
+        table {
             border-collapse: collapse;
             width: 500px;
         }
 
-        td, th{
+        td,
+        th {
             border: 1px solid #000;
             padding: 10px;
         }
 
-        td.num{
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background: lightgrey;
+        }
+
+        td.num {
             text-align: right;
         }
 
-        thead, tfoot{
+        thead,
+        tfoot {
             background-color: grey;
             color: #fff;
-        }  
+        }
     </style>
 </head>
 
@@ -37,6 +46,7 @@
     <h1>Uso de tabelas grandes</h1>
 
     <!-- ANATOMIA PARA TABELAS GRANDES 
+        CAPTION
         THEAD
             TR, TD, TH
         TBODY
@@ -46,10 +56,11 @@
     -->
 
     <table>
+        <caption>Federação das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Populção</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">Populção</th>
             </tr>
         </thead>
         <tbody>
@@ -161,10 +172,14 @@
                 <td>Roraima</td>
                 <td class="num">450 479</td>
             </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">210.147.125</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Amazonas</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         <tfoot>
