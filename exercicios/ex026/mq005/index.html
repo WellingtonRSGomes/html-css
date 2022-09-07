@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Global CSS -->
     <link rel="stylesheet" href="estilos/style.css">
+    <!-- Others devices -->
+    <link rel="stylesheet" href="estilos/media-query.css">
     
     <title>Media Query</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
@@ -60,13 +63,22 @@
         </article>
     </main>
 
-    <!-- JS Local / Click Menu-->
     <script>
+        // JS Local / Click Menu
         function clickMenu() {
             if(itens.style.display == 'block'){
                 itens.style.display = 'none'
             }else{
                 itens.style.display = 'block'
+            }
+        }
+
+        // Verificando o tamanho da tela
+        function mudouTamanho(){
+            if(window.innerWidth >= 768){
+                itens.style.display = 'block'
+            }else{
+                itens.style.display = 'none'
             }
         }
     </script>
